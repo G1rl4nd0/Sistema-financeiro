@@ -1,0 +1,71 @@
+<form
+  [formGroup]="cadastrarNovoBanco"
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          <h3>Cadastrar nova informação bancaria</h3>
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Titulo</label
+          >
+          <input
+            formControlName="titulo"
+            type="email"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Tipo</label>
+          <select
+            class="form-select c-inf-input"
+            aria-label="Default select example"
+          >
+            <option class="bg-success p-2 text-white" value="1">Entrada</option>
+            <option class="bg-danger p-2" value="2">Saida</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Valor</label>
+          <input
+            formControlName="valor"
+            type="number"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="c-inf-gravar-btn btn btn-secondary" data-bs-dismiss="modal">
+          Desistir
+        </button>
+        <button
+          type="button"
+          class="c-inf-gravar-btn btn btn-success"
+          (click)="CadastrarInformacaoBancaria()"
+        >
+          Gravar
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,44 @@
+.modal-content {
+  margin-left: 290px;
+  padding-bottom: 90px;
+  margin-top: -29px;
+}
+
+.modal-body {
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  width: 90%;
+  margin-top: 16px;
+  margin-left: 20px;
+}
+
+.modal-header, .modal-footer {
+  border-bottom: none;
+  border-top: none;
+}
+
+.form-control, .form-select {
+  box-shadow: none;
+}
+
+.c-inf-gravar-btn {
+  background-color: #28A745;
+  border: none;
+}
+
+.c-inf-gravar-btn:focus {
+  background-color: #1F7E35;
+}
+
+.c-inf-dessitir-btn {
+  background-color: #F8F9FA;
+  color: #333333;
+  border: #c2bfbf;
+}
+
+.c-inf-dessitir-btn:hover {
+  background-color: rgba(221, 221, 221, 0.808);
+  color: #333;
+}

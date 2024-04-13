@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-color: #2653A5;
+  background-color: #1E3969;
+  max-width: 100%;
 }
 
 .c-inf-listagem__title h1 {
@@ -21,8 +22,8 @@
   justify-content: space-between;
   gap: 20px;
   background-color: #F8F9FA;
-  border: 1px solid #d2d1d1 ;
-  height: 150px;
+  border: 1px solid #d2d1d1;
+  height: 100%;
   margin: -20px auto;
   margin-left: 130px;
   margin-right: 130px;
@@ -33,8 +34,8 @@
 }
 
 .c-inf-listagem-box-1 {
-  width: 300px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 0px 0px 5px #7d7d7d;
   border-radius: 8px;
@@ -43,20 +44,47 @@
 }
 
 .c-inf-listagem-gravar {
+  height: 26px;
   gap: 10px;
-  background-color: #2653A5;
+  background-color: #1E3969;
   color: #F8F9FA;
-  border: 1px solid #ececec ;
+  border: none;
   margin-left: 130px;
   margin-right: 130px;
-  border-radius: 8px;
   overflow: hidden;
   margin-bottom: -70px;
   margin-top: 100px;
 }
 
+.c-inf-listagem-gravar:focus {
+  background-color: #0A1952;
+}
+
+.c-inf-listagem-editar {
+  background-color: #1E3969;
+  border: none;
+}
+
+.c-inf-listagem-editar:focus {
+  background-color: #0A1952;
+}
+
+.c-inf-dessitir-btn {
+  background-color: #F8F9FA;
+  color: #333333;
+  border: #c2bfbf;
+}
+
+.c-inf-dessitir-btn:hover {
+  background-color: rgba(221, 221, 221, 0.808);
+  color: #333;
+}
+
 .c-inf-listagem-gravar-btn {
   margin-top: 23px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .c-inf-listagem__text-box {
@@ -69,4 +97,51 @@
   margin-right: 130px;
   overflow: hidden;
   margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.filtro_form {
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+table {
+  width: 75%;
+  border: 1px solid #ddd;
+  margin-left: 132px;
+  margin-right: 200px;
+}
+
+.dropdown-menu.show {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-control, .form-select {
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 576px) {
+  .c-inf-listagem-detalhes {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .c-inf-listagem-gravar {
+    height: 30px;
+    width: 50%;
+    margin-top: 30px;
+    
+  }
+
+  .c-inf-listagem-filtro {
+    width: 100%;
+    padding: 16px;
+    margin-left: 0;
+  }
 }

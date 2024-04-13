@@ -1,47 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+:root {
+  --font-size-base: 1.4rem;
+  --color-background: #F8F9FA;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font-family: Arial, Helvetica, sans-serif;
-	vertical-align: baseline;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+html {
+  font-size: 62.5%;
 }
+
 body {
-	line-height: 1;
+  font-size: var(--font-size-base);
 }
-ol, ul {
-	list-style: none;
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
 }
-blockquote, q {
-	quotes: none;
+
+h1, .h1 { font-size: 3.2rem; }
+h2, .h2 { font-size: 2.4rem; }
+h3, .h3 { font-size: 1.9rem; }
+h4, .h4 { font-size: 1.6rem; }
+h5, .h5 { font-size: 1.4rem; }
+h6, .h6 { font-size: 1.3rem; }
+
+label,
+p {
+  font-size: var(--font-size-base);
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.c-inf-input {
+  border-color: #ddd;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+.c-inf-input:hover {
+  border-color: #355FAC66;
+}
+
+.c-inf-input:focus {
+  border-color: #1E3969;
 }
