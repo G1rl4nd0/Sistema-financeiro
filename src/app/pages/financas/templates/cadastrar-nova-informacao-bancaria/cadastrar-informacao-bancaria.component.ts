@@ -1,11 +1,12 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { NotificacoesService } from 'src/app/shared/services/notificacoes/notificacoes.service';
 
-export type CadastrarInformacaoBancaria = {
-  Titulo: string,
-  Valor: number
+export interface CadastrarInformacaoBancaria {
+  Titulo: string;
+  Valor: number;
 }
-
 
 @Component({
   selector: 'cadastrar-nova-informacao-bancaria',
@@ -20,7 +21,8 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
 
   constructor(
     private formBulder: FormBuilder,
-
+    private toaster: ToastrService,
+    private notificacoesService: NotificacoesService
   ) {}
 
   ngOnInit(): void {
@@ -29,8 +31,8 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
 
   inicializarCadastroForm() {
     this.cadastrarNovoBanco = this.formBulder.group({
-      tipo: ['', Validators.required],
-      titulo: [''],
+      titulo: new FormControl('', [Validators.required]),
+      tipo: ['', [Validators.maxLength(60), Validators.required]],
       valor: ['']
     });
   }
@@ -42,6 +44,11 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
       Valor: form.value
     }
     this.onClick.emit(cadastrarForm)
-    console.log(form)
+    // this.toaster.success('Mensagem de sucesso!', 'Sucesso');
+    this.notificacoesService.success('Mensagem salva com sucesso')
+  }
+
+  DesistirCadastrarInformacao() {
+    this.cadastrarNovoBanco.reset();
   }
 }

@@ -9,7 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { EditarInformacaoBancariaComponent } from './pages/financas/templates/editar-informacao-bancaria/editar-informacao-bancaria.component';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,14 @@ import { EditarInformacaoBancariaComponent } from './pages/financas/templates/ed
     MatFormFieldModule,
     ReactiveFormsModule,
     MatTableModule,
-    CdkTableModule
+    CdkTableModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      progressBar: true,
+      closeButton: true,
+      timeOut: 8000
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

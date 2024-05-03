@@ -23,18 +23,34 @@
       <div class="modal-body">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label"
-            >Titulo</label
+            >Titulo
+            <em class="c-inf-color-danger">*</em>
+            </label
           >
           <input
             formControlName="titulo"
-            type="email"
+            [id]="'nome'"
+            type="text"
             class="c-inf-input form-control"
             id="exampleFormControlInput1"
           />
+          <small
+            class="c-inf-color-danger"
+            *ngIf="
+              !cadastrarNovoBanco.get('titulo')?.valid &&
+              (cadastrarNovoBanco.get('titulo')?.dirty ||
+              cadastrarNovoBanco.get('titulo')?.touched)
+            "
+          >
+            Digite o titulo!
+          </small>
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Tipo</label>
+          <label for="exampleFormControlInput1" class="form-label">
+            Tipo
+            <em class="c-inf-color-danger">*</em>
+          </label>
           <select
             class="form-select c-inf-input"
             aria-label="Default select example"
@@ -45,7 +61,10 @@
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Valor</label>
+          <label for="exampleFormControlInput1" class="form-label">
+            Valor
+            <em class="c-inf-color-danger">*</em>
+          </label>
           <input
             formControlName="valor"
             type="number"
@@ -55,7 +74,11 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="c-inf-gravar-btn btn btn-secondary" data-bs-dismiss="modal">
+        <button
+          type="button"
+          class="c-inf-dessitir-btn btn btn-secondary"
+          (click)="DesistirCadastrarInformacao()"
+        >
           Desistir
         </button>
         <button

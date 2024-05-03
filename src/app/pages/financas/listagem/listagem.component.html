@@ -11,7 +11,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">5.000,00</h5>
+              <h5 class="h4 card-title">R$ 5.000,00</h5>
               <p class="card-text">Receita Mensal</p>
             </div>
           </div>
@@ -25,7 +25,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">2.000,00</h5>
+              <h5 class="h4 card-title">R$ 2.000,00</h5>
               <p class="card-text">Despesa</p>
             </div>
           </div>
@@ -39,7 +39,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">3.000,00</h5>
+              <h5 class="h4 card-title">R$ 3.000,00</h5>
               <p class="card-text">Total</p>
             </div>
           </div>
@@ -139,6 +139,7 @@
 </div>
 
 <editar-nova-informacao-bancaria></editar-nova-informacao-bancaria>
+
 <div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
@@ -213,3 +214,17 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
+
+<div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+
+

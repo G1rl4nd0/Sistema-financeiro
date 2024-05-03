@@ -125,6 +125,14 @@ table {
   box-shadow: none;
 }
 
+.accordion-button {
+  background-color: #ffffff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 @media only screen and (max-width: 576px) {
   .c-inf-listagem-detalhes {
     width: 80%;
@@ -136,7 +144,6 @@ table {
     height: 30px;
     width: 50%;
     margin-top: 30px;
-    
   }
 
   .c-inf-listagem-filtro {
