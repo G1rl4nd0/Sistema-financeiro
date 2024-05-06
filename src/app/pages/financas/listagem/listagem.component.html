@@ -1,230 +1,249 @@
 <div class="c-inf-listagem">
-  <div class="c-inf-listagem__title">
-    <h1>Sistema Financeiro</h1>
-  </div>
+  <header>
+    <div class="c-inf-listagem__title">
+      <h1>Sistema Financeiro</h1>
+    </div>
 
-  <div class="c-inf-listagem-detalhes row">
-      <div class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+    <div class="c-inf-listagem-detalhes row">
+      <div
+        class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3"
+      >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="../../../../assets/img/image 2.png" class="img-fluid rounded-start" alt="...">
+            <img
+              src="../../../../assets/img/image 2.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">R$ 5.000,00</h5>
+              <h5 class="receita-mensal-title card-title">R$ 5.000,00</h5>
               <p class="card-text">Receita Mensal</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+      <div
+        class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3"
+      >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="../../../../assets/img/image 3.png" class="img-fluid rounded-start" alt="...">
+            <img
+              src="../../../../assets/img/image 3.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">R$ 2.000,00</h5>
+              <h5 class="despesa-mensal-title card-title">R$ 2.000,00</h5>
               <p class="card-text">Despesa</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+      <div
+        class="c-inf-listagem-box-1 card col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3"
+      >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="../../../../assets/img/image 4.png" class="img-fluid rounded-start" alt="...">
+            <img
+              src="../../../../assets/img/image 4.png"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="h4 card-title">R$ 3.000,00</h5>
+              <h5 class="mensal-title card-title">R$ 3.000,00</h5>
               <p class="card-text">Total</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-<!-- Button trigger modal -->
-<button
-  type="button"
-  class="c-inf-listagem-gravar btn btn-primary"
-  data-bs-toggle="modal"
-  data-bs-target="#exampleModal"
->
 
-  + Nova informação bancaria
-</button>
+  <button
+    type="button"
+    class="c-inf-listagem-gravar btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+  >
+    + Cadastrar nova informação bancaria
+  </button>
 
-<cadastrar-nova-informacao-bancaria></cadastrar-nova-informacao-bancaria>
+  <cadastrar-nova-informacao-bancaria></cadastrar-nova-informacao-bancaria>
 
-<div class="accordion c-inf-listagem-filtro" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseOne"
-        aria-expanded="false"
-        aria-controls="collapseOne"
+  <div class="accordion c-inf-listagem-filtro" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="false"
+          aria-controls="collapseOne"
+        >
+          <h2 class="h4">Filtro</h2>
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#accordionExample"
       >
-        <h2 class="h4" >Filtro</h2>
+        <div class="accordion-body">
+          <div class="filtro_form row">
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Data</label
+              >
+              <input
+                type="email"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
 
-      </button>
-    </h2>
-    <div
-      id="collapseOne"
-      class="accordion-collapse collapse show"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <div class="filtro_form row">
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Titulo</label
+              >
+              <input
+                type="email"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
 
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Data</label
-            >
-            <input
-              type="email"
-              class="c-inf-input form-control"
-              id="exampleFormControlInput1"
-            />
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Tipo</label
+              >
+              <input
+                type="email"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Valor</label
+              >
+              <input
+                type="email"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
           </div>
 
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Titulo</label
-            >
-            <input
-              type="email"
-              class="c-inf-input form-control"
-              id="exampleFormControlInput1"
-            />
+          <div class="c-inf-listagem-gravar-btn">
+            <button type="button" class="c-inf-listagem-editar btn btn-success">
+              Aplicar filtros
+            </button>
+            <button type="button" class="c-inf-dessitir-btn btn btn-secondary">
+              Desistir
+            </button>
           </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Tipo</label
-            >
-            <input
-              type="email"
-              class="c-inf-input form-control"
-              id="exampleFormControlInput1"
-            />
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Valor</label
-            >
-            <input
-              type="email"
-              class="c-inf-input form-control"
-              id="exampleFormControlInput1"
-            />
-          </div>
-        </div>
-
-        <div class="c-inf-listagem-gravar-btn">
-          <button type="button" class="c-inf-listagem-editar btn btn-success">Aplicar filtros</button>
-          <button type="button" class="c-inf-dessitir-btn btn btn-secondary">Desistir</button>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<editar-nova-informacao-bancaria></editar-nova-informacao-bancaria>
+  <editar-nova-informacao-bancaria></editar-nova-informacao-bancaria>
 
-<div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
+  <div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef>Ações</th>
-      <td mat-cell *matCellDef="let element">
-        <div class="btn-group" role="group">
-          <button
-            type="button"
-            class="btn btn-light dropdown-toggle border border-secondary"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Ações
-          </button>
-          <ul class="dropdown-menu p-2">
-            <div>
-              <li>
-                <button
-                  type="button"
-                  class="c-inf-listagem-editar btn btn-primary w-100"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModalEditar"
-                >
-                  Editar
-                </button>
-              </li>
-            </div>
-            <div>
-              <li>
-                <button
-                  type="button"
-                  class="btn btn-danger w-100"
-                  (click)="apagar()"
-                >
-                  Apagar
-                </button>
-              </li>
-            </div>
-          </ul>
-        </div>
-      </td>
-    </ng-container>
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="btn-group" role="group">
+            <button
+              type="button"
+              class="btn btn-light dropdown-toggle border border-secondary"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Ações
+            </button>
+            <ul class="dropdown-menu p-2">
+              <div>
+                <li>
+                  <button
+                    type="button"
+                    class="c-inf-listagem-editar btn btn-primary w-100"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModalEditar"
+                  >
+                    Editar
+                  </button>
+                </li>
+              </div>
+              <div>
+                <li>
+                  <button
+                    type="button"
+                    class="btn btn-danger w-100"
+                    (click)="apagar()"
+                  >
+                    Apagar
+                  </button>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </td>
+      </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Titulo</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-    </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Titulo</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-      <th mat-header-cell *matHeaderCellDef>Data</th>
-      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
-    </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th mat-header-cell *matHeaderCellDef>Data</th>
+        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      </ng-container>
 
-    <ng-container matColumnDef="tipo">
-      <th mat-header-cell *matHeaderCellDef>Tipo</th>
-      <td mat-cell *matCellDef="let element">{{ element.tipo }}</td>
-    </ng-container>
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef>Tipo</th>
+        <td mat-cell *matCellDef="let element">{{ element.tipo }}</td>
+      </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef>Valor</th>
-      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
-    </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef>Valor</th>
+        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+      </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+
+  <div class="paginação">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
 </div>
-
-<div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-  </nav>
-</div>
-
-
