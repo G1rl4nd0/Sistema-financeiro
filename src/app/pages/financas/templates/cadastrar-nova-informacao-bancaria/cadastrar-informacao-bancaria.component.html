@@ -1,94 +1,96 @@
-<form
-  [formGroup]="cadastrarNovoBanco"
-  class="modal fade"
-  id="exampleModal"
+<div
+  class="offcanvas offcanvas-end"
   tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
 >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
-          <h3>Cadastrar nova informação bancaria</h3>
-        </h1>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Titulo
-            <em class="c-inf-color-danger">*</em>
-            </label
-          >
-          <input
-            formControlName="titulo"
-            [id]="'nome'"
-            type="text"
-            class="c-inf-input form-control"
-            id="exampleFormControlInput1"
-          />
-          <small
-            class="c-inf-color-danger"
-            *ngIf="
-              !cadastrarNovoBanco.get('titulo')?.valid &&
-              (cadastrarNovoBanco.get('titulo')?.dirty ||
-              cadastrarNovoBanco.get('titulo')?.touched)
-            "
-          >
-            Digite o titulo!
-          </small>
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Tipo
-            <em class="c-inf-color-danger">*</em>
-          </label>
-          <select
-            class="form-select c-inf-input"
-            aria-label="Default select example"
-          >
-            <option class="bg-success p-2 text-white" value="1">Entrada</option>
-            <option class="bg-danger p-2" value="2">Saida</option>
-          </select>
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
-            Valor
-            <em class="c-inf-color-danger">*</em>
-          </label>
-          <input
-            formControlName="valor"
-            type="number"
-            class="c-inf-input form-control"
-            id="exampleFormControlInput1"
-          />
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="c-inf-dessitir-btn btn btn-secondary"
-          (click)="DesistirCadastrarInformacao()"
-        >
-          Desistir
-        </button>
-        <button
-          type="button"
-          class="c-inf-gravar-btn btn btn-success"
-          (click)="CadastrarInformacaoBancaria()"
-        >
-          Gravar
-        </button>
-      </div>
-    </div>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">
+      Cadastrar nova informação bancaria
+    </h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
   </div>
-</form>
+  <div class="offcanvas-body">
+    <form [formGroup]="cadastrarNovoBanco">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Titulo
+                <em class="c-inf-color-danger">*</em>
+              </label>
+              <input
+                formControlName="titulo"
+                [id]="'nome'"
+                type="text"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+              <small
+                class="c-inf-color-danger"
+                *ngIf="
+                  !cadastrarNovoBanco.get('titulo')?.valid &&
+                  (cadastrarNovoBanco.get('titulo')?.dirty ||
+                    cadastrarNovoBanco.get('titulo')?.touched)
+                "
+              >
+                Digite o titulo!
+              </small>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">
+                Tipo
+                <em class="c-inf-color-danger">*</em>
+              </label>
+              <select
+                class="form-select c-inf-input"
+                aria-label="Default select example"
+              >
+                <option class="bg-success p-2 text-white" value="1">
+                  Entrada
+                </option>
+                <option class="bg-danger p-2" value="2">Saida</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">
+                Valor
+                <em class="c-inf-color-danger">*</em>
+              </label>
+              <input
+                formControlName="valor"
+                type="number"
+                class="c-inf-input form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="c-inf-dessitir-btn btn btn-secondary"
+              (click)="DesistirCadastrarInformacao()"
+            >
+              Desistir
+            </button>
+            <button
+              type="button"
+              class="c-inf-gravar-btn btn btn-success"
+              (click)="CadastrarInformacaoBancaria()"
+            >
+              Gravar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

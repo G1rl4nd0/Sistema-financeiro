@@ -1,6 +1,4 @@
 .modal-content {
-  margin-left: 290px;
-  padding-bottom: 90px;
   margin-top: -29px;
 }
 
@@ -9,9 +7,14 @@
   padding: 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   margin-top: 16px;
-  margin-left: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
 }
 
 .modal-header, .modal-footer {
