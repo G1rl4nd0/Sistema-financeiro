@@ -74,7 +74,7 @@
     data-bs-target="#offcanvasRight"
     aria-controls="offcanvasRight"
   >
-  + Cadastrar nova informação bancaria
+    + Cadastrar nova informação bancaria
   </button>
 
   <cadastrar-nova-informacao-bancaria></cadastrar-nova-informacao-bancaria>
@@ -95,7 +95,7 @@
       </h2>
       <div
         id="collapseOne"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#accordionExample"
       >
         <div class="accordion-body">
@@ -182,10 +182,11 @@
               <div>
                 <li>
                   <button
-                    type="button"
                     class="c-inf-listagem-editar btn btn-primary w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModalEditar"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#modalEditar"
+                    aria-controls="offcanvasRight"
                   >
                     Editar
                   </button>
