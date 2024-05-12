@@ -51,4 +51,6 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
   DesistirCadastrarInformacao() {
     this.cadastrarNovoBanco.reset();
   }
+
+
 }

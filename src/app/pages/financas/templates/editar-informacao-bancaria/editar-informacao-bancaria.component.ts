@@ -1,12 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-export type CadastrarInformacaoBancaria = {
-  data: string,
-  titulo: string,
-  valor: number
-}
-
+export type EditarInformacaoBancaria = {
+  data: string;
+  titulo: string;
+  valor: number;
+};
 
 @Component({
   selector: 'editar-nova-informacao-bancaria',
@@ -14,39 +13,32 @@ export type CadastrarInformacaoBancaria = {
   styleUrls: ['./editar-informacao-bancaria.component.scss'],
 })
 export class EditarInformacaoBancariaComponent implements OnInit {
+  @Output() public onClick = new EventEmitter<EditarInformacaoBancaria>();
 
-  @Output() public onClick = new EventEmitter<CadastrarInformacaoBancaria>()
+  editarInformacaoBancaria!: FormGroup;
 
-  cadastrarNovoBancario!: FormGroup;
-
-  constructor(
-    private formBulder: FormBuilder,
-
-  ) {}
+  constructor(private formBulder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.inicializarCadastroForm()
+    this.inicializarCadastroForm();
   }
 
   inicializarCadastroForm() {
-    this.cadastrarNovoBancario = this.formBulder.group({
-      data: [''],
-      tipo: ['', Validators.required],
+    this.editarInformacaoBancaria = this.formBulder.group({
+      codigo: ['E7HEF8387F673TF367'],
+      tipo: [''],
       titulo: [''],
-      valor: ['']
+      valor: [''],
     });
   }
 
   CadastrarInformacaoBancaria() {
-    const form = this.cadastrarNovoBancario.value;
-    const cadastrarForm: CadastrarInformacaoBancaria = {
+    const form = this.editarInformacaoBancaria.value;
+    const cadastrarForm: EditarInformacaoBancaria = {
       data: form.data,
       titulo: form.titulo,
-      valor: form.valor
-    }
-    this.onClick.emit(cadastrarForm)
-
+      valor: form.valor,
+    };
+    this.onClick.emit(cadastrarForm);
   }
-
-
 }

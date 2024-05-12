@@ -16,7 +16,7 @@
     ></button>
   </div>
   <div class="offcanvas-body">
-    <form [formGroup]="cadastrarNovoBancario">
+    <form [formGroup]="editarInformacaoBancaria">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
@@ -25,9 +25,10 @@
                 >Código</label
               >
               <input
-                formControlName="data"
-                class="c-inf-input form-control"
+                formControlName="codigo"
+                class="c-inf-input border-style form-control"
                 id="exampleFormControlInput1"
+                readonly
               />
             </div>
 
