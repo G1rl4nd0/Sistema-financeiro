@@ -7,6 +7,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     CommonModule,
     MatPaginatorModule
   ],
-  declarations: []
+  declarations: [],
 })
-export class ListagemModule { }
+export class ListagemModule {}

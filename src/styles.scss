@@ -1,10 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import '~ngx-toastr/toastr.css';
 
 :root {
   --font-size-base: 1rem;
-  --color-background: #F8F9FA;
+
 }
 
 * {
@@ -20,6 +19,73 @@ html {
 
 body {
   font-size: var(--font-size-base);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --color-dark: #1f2937;
+  --color-gray: #083344;
+  --color-light: #F8F9FA;
+  --primary-color: #1E3969;
+  --text-color: #000000;
+  --text-color-gray: #d1d5db;
+  --color-border: #d2d1d1;
+
+}
+
+.light-mode {
+  background-color: var(--color-light);
+  color: var(--text-color);
+
+  .c-inf-listagem-detalhes {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-border);
+  }
+
+  header {
+    background-color:  var(--primary-color);
+  }
+
+
+
+
+}
+
+.dark-mode {
+  background-color: var(--color-dark);
+  color: var(--text-color-gray);
+
+  .c-inf-listagem-detalhes {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-border);
+  }
+
+  .c-inf-listagem-box-1 {
+    background-color: var(--color-gray);
+    box-shadow: none !important;
+  }
+
+  .accordion-item:first-of-type>.accordion-header .accordion-button {
+    background-color: var(--color-gray);
+    color: var(--text-color-gray);
+  }
+
+  .mensal-title {
+    color: var(--text-color-gray) !important;
+  }
+
+  .card-text {
+    color: var(--text-color-gray);
+  }
+
+  header {
+    background-color: var(--color-gray);
+  }
+
+
+
+
+
 }
 
 html,

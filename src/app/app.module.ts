@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ListagemComponent,
     CadastrarInformacaoBancariaComponent,
-    EditarInformacaoBancariaComponent
+    EditarInformacaoBancariaComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,10 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       preventDuplicates: true,
       progressBar: true,
       closeButton: true,
-      timeOut: 8000
-    }),
+      timeOut: 8000,
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
