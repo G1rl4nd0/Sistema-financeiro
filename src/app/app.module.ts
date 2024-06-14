@@ -11,6 +11,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { EditarInformacaoBancariaComponent } from './pages/financas/templates/editar-informacao-bancaria/editar-informacao-bancaria.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DxButtonModule, DxDataGridModule, DxDropDownButtonModule } from 'devextreme-angular';
+import { DxiColumnModule } from 'devextreme-angular/ui/nested';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatTableModule,
     CdkTableModule,
+    DxButtonModule,
+    DxDataGridModule,
+    DxiColumnModule,
+    DxDropDownButtonModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
       preventDuplicates: true,
