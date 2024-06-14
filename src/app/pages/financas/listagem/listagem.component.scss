@@ -1,11 +1,15 @@
-header {
-
-}
-
 .c-inf-listagem {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  gap: 20px;
+}
+
+.c-inf-pesquisa {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 130px;
+  margin-right: 130px;
 }
 
 .c-inf-listagem__title h1 {
@@ -18,7 +22,6 @@ header {
   font-weight: 500;
   line-height: normal;
 }
-
 .c-inf-listagem-detalhes {
   display: flex;
   justify-content: space-between;
@@ -45,14 +48,9 @@ header {
   background-color: #1E3969;
   color: #F8F9FA;
   border: none;
-  margin-left: 130px;
-  margin-right: 130px;
-  overflow: hidden;
-  margin-bottom: -70px;
-  margin-top: 100px;
+  margin-top: 90px;
   width: 20%;
 }
-
 .c-inf-listagem-gravar:focus {
   background-color: #0A1952;
 }
@@ -71,7 +69,6 @@ header {
   color: #333333;
   border: #c2bfbf;
 }
-
 .c-inf-dessitir-btn:hover {
   background-color: rgba(221, 221, 221, 0.808);
   color: #333;
@@ -84,39 +81,11 @@ header {
   gap: 8px;
 }
 
-.c-inf-listagem__text-box {
-  display: flex;
-}
-
-.c-inf-listagem-filtro {
-  margin: -20px auto;
-  margin-left: 130px;
-  margin-right: 130px;
-  overflow: hidden;
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
-
 .filtro_form {
   border-radius: 8px;
   padding: 16px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-table {
-  width: 75%;
-  border: 1px solid #ddd;
-  margin-left: 132px;
-  margin-right: 200px;
-}
-
-.dropdown-menu.show {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .form-control, .form-select {
   box-shadow: none;
 }
@@ -135,7 +104,6 @@ table {
   font-size: 1.6rem;
   font-weight: 600;
 }
-
 .despesa-mensal-title {
   color: #B80E0E;
   font-weight: bold;
@@ -169,6 +137,14 @@ table {
     padding: 16px;
   }
 
+  .c-inf-pesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .c-inf-listagem-box-1 {
     height: 80px;
     width: 100%;
@@ -189,21 +165,11 @@ table {
 
   .c-inf-listagem-filtro {
     width: 100%;
-    padding: 16px;
     margin-left: 0;
-    margin-top: 14px;
-    margin-bottom: 14px;
   }
 
   header {
     margin-bottom: 50%;
-  }
-
-  table {
-    width: 90%;
-    border: 1px solid #ddd;
-    margin: 0 auto;
-    margin-right: 0 auto;
   }
 }
 
