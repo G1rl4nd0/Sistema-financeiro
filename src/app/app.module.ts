@@ -13,15 +13,17 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DxButtonModule, DxDataGridModule, DxDropDownButtonModule, DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
 import { DxiColumnModule } from 'devextreme-angular/ui/nested';
+import { FiltrosModule } from './shared/components/filtros/filtros.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListagemComponent,
     CadastrarInformacaoBancariaComponent,
-    EditarInformacaoBancariaComponent,
+    EditarInformacaoBancariaComponent
   ],
   imports: [
+    FiltrosModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

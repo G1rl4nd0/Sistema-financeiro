@@ -1,0 +1,31 @@
+<section>
+  <dx-accordion
+    [collapsible]="collapsible"
+    [animationDuration]="animationDuration"
+    [selectedIndex]="selectedIndex"
+    [disabled]="disabled"
+    [visible]="visible"
+  >
+    <dxi-item [title]="title" [icon]="' ' + icon">
+      <div class="filtros__content">
+        <ng-content></ng-content>
+      </div>
+      <div class="filtros__botoes">
+        <dx-button
+          icon="check"
+          class="c-inf-dessitir-btn btn btn-secondary"
+          (onClick)="btnLimparClick()"
+        >
+          Limpar
+        </dx-button>
+
+        <dx-button
+          class="c-inf-listagem-gravar btn btn-secondary"
+          (onClick)="btnAplicarFiltrosClick()"
+        >
+          Filtrar
+        </dx-button>
+      </div>
+    </dxi-item>
+  </dx-accordion>
+</section>

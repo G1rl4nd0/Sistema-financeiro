@@ -88,90 +88,54 @@
 
     <cadastrar-nova-informacao-bancaria></cadastrar-nova-informacao-bancaria>
 
-    <div class="accordion c-inf-listagem-filtro" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="false"
-            aria-controls="collapseOne"
+    <filtros-component>
+      <div class="filtro_form row">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Data</label
           >
-            <h2 class="h4">Filtro</h2>
-          </button>
-        </h2>
-        <div
-          id="collapseOne"
-          class="accordion-collapse collapse"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body">
-            <div class="filtro_form row">
-              <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Data</label
-                >
-                <input
-                  type="email"
-                  class="c-inf-input form-control"
-                  id="exampleFormControlInput1"
-                />
-              </div>
+          <input
+            type="email"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
 
-              <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Titulo</label
-                >
-                <input
-                  type="email"
-                  class="c-inf-input form-control"
-                  id="exampleFormControlInput1"
-                />
-              </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Titulo</label
+          >
+          <input
+            type="email"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
 
-              <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Tipo</label
-                >
-                <input
-                  type="email"
-                  class="c-inf-input form-control"
-                  id="exampleFormControlInput1"
-                />
-              </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Tipo</label
+          >
+          <input
+            type="email"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
 
-              <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Valor</label
-                >
-                <input
-                  type="email"
-                  class="c-inf-input form-control"
-                  id="exampleFormControlInput1"
-                />
-              </div>
-            </div>
-
-            <div class="c-inf-listagem-gravar-btn">
-              <button
-                type="button"
-                class="c-inf-listagem-editar btn btn-success"
-              >
-                Aplicar filtros
-              </button>
-              <button
-                type="button"
-                class="c-inf-dessitir-btn btn btn-secondary"
-              >
-                Desistir
-              </button>
-            </div>
-          </div>
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-2 mt-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Valor</label
+          >
+          <input
+            type="email"
+            class="c-inf-input form-control"
+            id="exampleFormControlInput1"
+          />
         </div>
       </div>
-    </div>
+
+    </filtros-component>
 
     <editar-nova-informacao-bancaria></editar-nova-informacao-bancaria>
 

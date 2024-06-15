@@ -1,0 +1,36 @@
+.filtros__content {
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.filtros__botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.c-inf-dessitir-btn {
+  background-color: #F8F9FA;
+  color: #333333;
+  border: #c2bfbf;
+}
+
+.c-inf-dessitir-btn:hover {
+  background-color: rgba(221, 221, 221, 0.808);
+  color: #333;
+}
+
+.c-inf-listagem-gravar {
+  height: 26px;
+  gap: 10px;
+  background-color: #1E3969;
+  color: #F8F9FA;
+  border: none;
+  width: auto;
+}
+.c-inf-listagem-gravar:focus {
+  background-color: #0A1952;
+}
