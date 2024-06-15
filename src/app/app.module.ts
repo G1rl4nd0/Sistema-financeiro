@@ -11,7 +11,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { EditarInformacaoBancariaComponent } from './pages/financas/templates/editar-informacao-bancaria/editar-informacao-bancaria.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DxButtonModule, DxDataGridModule, DxDropDownButtonModule } from 'devextreme-angular';
+import { DxButtonModule, DxDataGridModule, DxDropDownButtonModule, DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
 import { DxiColumnModule } from 'devextreme-angular/ui/nested';
 
 @NgModule({
@@ -23,12 +23,15 @@ import { DxiColumnModule } from 'devextreme-angular/ui/nested';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatTableModule,
     CdkTableModule,
     DxButtonModule,
+    DxTextBoxModule,
+    DxSelectBoxModule,
     DxDataGridModule,
     DxiColumnModule,
     DxDropDownButtonModule,

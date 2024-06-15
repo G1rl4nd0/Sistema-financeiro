@@ -16,7 +16,7 @@
     ></button>
   </div>
   <div class="offcanvas-body">
-    <form [formGroup]="cadastrarNovoBanco">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">
@@ -25,39 +25,59 @@
                 >Titulo
                 <em class="c-inf-color-danger">*</em>
               </label>
-              <input
+              <dx-text-box
+                [showClearButton]="true"
+                [height]="25"
                 formControlName="titulo"
-                [id]="'nome'"
-                type="text"
-                class="c-inf-input form-control"
-                id="exampleFormControlInput1"
-              />
-              <small
-                class="c-inf-color-danger"
-                *ngIf="
-                  !cadastrarNovoBanco.get('titulo')?.valid &&
-                  (cadastrarNovoBanco.get('titulo')?.dirty ||
-                    cadastrarNovoBanco.get('titulo')?.touched)
-                "
-              >
-                Digite o titulo!
-              </small>
+                [class.is-invalid]="formService.isInvalid(form, 'titulo')"
+              ></dx-text-box>
+              <div class="invalid-feedback" *ngIf="form.get('titulo')?.errors">
+                <div
+                  *ngIf="
+                    form.get('titulo')?.hasError('required') &&
+                    form.get('titulo')
+                  "
+                >
+                  {{ "Digite um titulo valido!" }}
+                </div>
+                <div
+                  *ngIf="
+                    form.get('titulo')?.hasError('maxlength') &&
+                    form.get('titulo')
+                  "
+                >
+                  {{
+                    "O campo titulo deve ter no maximo " + 60 + " caracteres!"
+                  }}
+                </div>
+              </div>
             </div>
 
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">
-                Tipo
+              <label
+                >Tipo
                 <em class="c-inf-color-danger">*</em>
               </label>
-              <select
-                class="form-select c-inf-input"
-                aria-label="Default select example"
-              >
-                <option class="bg-success p-2 text-white" value="1">
-                  Entrada
-                </option>
-                <option class="bg-danger p-2" value="2">Saida</option>
-              </select>
+              <dx-select-box
+                [dataSource]="situacaoDataSource"
+                [displayExpr]="'text'"
+                [valueExpr]="'value'"
+                [height]="26"
+                formControlName="tipo"
+                [placeholder]="'Selecione um tipo'"
+                [class.is-invalid]="formService.isInvalid(form, 'tipo')"
+              ></dx-select-box>
+              <div class="invalid-feedback" *ngIf="form.get('tipo')?.errors">
+                <div
+                  *ngIf="
+                    form.get('tipo')?.hasError('required') &&
+                    form.get('tipo')
+                  "
+                >
+                  {{ "Digite um tipo de entrada!" }}
+                </div>
+              </div>
+
             </div>
 
             <div class="mb-3">
@@ -65,12 +85,22 @@
                 Valor
                 <em class="c-inf-color-danger">*</em>
               </label>
-              <input
+              <dx-text-box
+                [showClearButton]="true"
+                [height]="25"
                 formControlName="valor"
-                type="number"
-                class="c-inf-input form-control"
-                id="exampleFormControlInput1"
-              />
+                [class.is-invalid]="formService.isInvalid(form, 'valor')"
+              ></dx-text-box>
+              <div class="invalid-feedback" *ngIf="form.get('valor')?.errors">
+                <div
+                  *ngIf="
+                    form.get('valor')?.hasError('required') &&
+                    form.get('valor')
+                  "
+                >
+                  {{ "Digite um valor valido!" }}
+                </div>
+              </div>
             </div>
           </div>
           <div class="modal-footer">

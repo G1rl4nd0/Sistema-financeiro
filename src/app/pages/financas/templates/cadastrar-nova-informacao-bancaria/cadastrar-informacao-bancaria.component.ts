@@ -1,11 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { FormService } from 'src/app/shared/services/form/form.service';
 import { NotificacoesService } from 'src/app/shared/services/notificacoes/notificacoes.service';
 
 export interface CadastrarInformacaoBancaria {
   Titulo: string;
   Valor: number;
+}
+
+type SituacaoOption = {
+  text: string,
+  value: boolean
 }
 
 @Component({
@@ -17,39 +23,43 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
 
   @Output() public onClick = new EventEmitter<CadastrarInformacaoBancaria>()
 
-  cadastrarNovoBanco!: FormGroup;
+  form!: FormGroup;
+
+  situacaoDataSource: SituacaoOption[] = [
+    { text: 'Entrada', value: true },
+    { text: 'Saída', value: false }
+  ]
 
   constructor(
-    private formBulder: FormBuilder,
+    public formService: FormService,
+    private fb: FormBuilder,
     private toaster: ToastrService,
     private notificacoesService: NotificacoesService
   ) {}
 
   ngOnInit(): void {
-    this.inicializarCadastroForm()
+    this.iniciarForm();
   }
 
-  inicializarCadastroForm() {
-    this.cadastrarNovoBanco = this.formBulder.group({
-      titulo: new FormControl('', [Validators.required]),
-      tipo: ['', [Validators.maxLength(60), Validators.required]],
-      valor: ['']
-    });
+  iniciarForm() {
+    this.form = this.fb.group({
+      titulo: ['', [Validators.maxLength(60), Validators.required]],
+      tipo: [this.situacaoDataSource[0], Validators.required],
+      valor: ['' , [Validators.maxLength(5), Validators.required]]
+    })
+    console.log(this.form)
+  }
+
+  onSubmit() {
+
   }
 
   CadastrarInformacaoBancaria() {
-    const form = this.cadastrarNovoBanco.value;
-    const cadastrarForm: CadastrarInformacaoBancaria = {
-      Titulo: form.value,
-      Valor: form.value
-    }
-    this.onClick.emit(cadastrarForm)
-    // this.toaster.success('Mensagem de sucesso!', 'Sucesso');
-    this.notificacoesService.success('Mensagem salva com sucesso')
+    console.log(this.form.value)
   }
 
   DesistirCadastrarInformacao() {
-    this.cadastrarNovoBanco.reset();
+    this.form.reset();
   }
 
 
