@@ -56,6 +56,7 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
 
   CadastrarInformacaoBancaria() {
     console.log(this.form.value)
+    this.notificacoesService.success('Valor cadastrado com sucesso!')
   }
 
   DesistirCadastrarInformacao() {

@@ -70,14 +70,12 @@
               <div class="invalid-feedback" *ngIf="form.get('tipo')?.errors">
                 <div
                   *ngIf="
-                    form.get('tipo')?.hasError('required') &&
-                    form.get('tipo')
+                    form.get('tipo')?.hasError('required') && form.get('tipo')
                   "
                 >
                   {{ "Digite um tipo de entrada!" }}
                 </div>
               </div>
-
             </div>
 
             <div class="mb-3">
@@ -94,8 +92,7 @@
               <div class="invalid-feedback" *ngIf="form.get('valor')?.errors">
                 <div
                   *ngIf="
-                    form.get('valor')?.hasError('required') &&
-                    form.get('valor')
+                    form.get('valor')?.hasError('required') && form.get('valor')
                   "
                 >
                   {{ "Digite um valor valido!" }}
@@ -104,20 +101,20 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
+            <dx-button
               class="c-inf-dessitir-btn btn btn-secondary"
               (click)="DesistirCadastrarInformacao()"
             >
               Desistir
-            </button>
-            <button
-              type="button"
+            </dx-button>
+
+            <dx-button
+              icon="check"
               class="c-inf-gravar-btn btn btn-success"
               (click)="CadastrarInformacaoBancaria()"
             >
               Gravar
-            </button>
+            </dx-button>
           </div>
         </div>
       </div>
