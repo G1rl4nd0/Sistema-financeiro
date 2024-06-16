@@ -42,13 +42,7 @@
 }
 
 .c-inf-listagem-gravar {
-  height: 26px;
-  gap: 10px;
-  background-color: #1E3969;
-  color: #F8F9FA;
-  border: none;
   margin-top: 90px;
-  width: 25%;
 }
 .c-inf-listagem-gravar:focus {
   background-color: #0A1952;
@@ -223,4 +217,10 @@
 }
 .switch--shadow:checked + label:after {
   transform: translateX(60px);
+}
+
+::ng-deep .c-inf-listagem-gravar .dx-button-mode-contained.dx-button-default {
+  background-color: var(--primary-color);
+  border-color: transparent;
+  color: #fff;
 }

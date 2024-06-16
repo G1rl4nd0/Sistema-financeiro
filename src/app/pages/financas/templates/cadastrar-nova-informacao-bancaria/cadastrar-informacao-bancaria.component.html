@@ -62,7 +62,6 @@
                 [dataSource]="situacaoDataSource"
                 [displayExpr]="'text'"
                 [valueExpr]="'value'"
-                [height]="26"
                 formControlName="tipo"
                 [placeholder]="'Selecione um tipo'"
                 [class.is-invalid]="formService.isInvalid(form, 'tipo')"
@@ -101,20 +100,22 @@
             </div>
           </div>
           <div class="modal-footer">
-            <dx-button
-              class="c-inf-dessitir-btn btn btn-secondary"
+            <button-padrao-component
+              class="botao"
               (click)="DesistirCadastrarInformacao()"
-            >
-              Desistir
-            </dx-button>
+              [disabled]="!form.dirty || disabled"
+              [text]="'Desistir'"
+              [icon]="'fas fa-times-circle'"
+            ></button-padrao-component>
 
-            <dx-button
-              icon="check"
-              class="c-inf-gravar-btn btn btn-success"
+            <button-padrao-component
+              class="botao-gravar"
               (click)="CadastrarInformacaoBancaria()"
-            >
-              Gravar
-            </dx-button>
+              [disabled]="!form.valid || disabled"
+              [text]="'Gravar'"
+              [icon]="'fas fa-check'"
+            ></button-padrao-component>
+
           </div>
         </div>
       </div>

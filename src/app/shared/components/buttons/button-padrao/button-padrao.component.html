@@ -1,0 +1,24 @@
+<dx-button
+  [height]="height"
+  [type]="type"
+  [width]="width"
+  [disabled]="disabled || loadIndicatorVisible"
+  [visible]="visible"
+  (onClick)="onClick.emit()"
+  [stylingMode]="stylingMode"
+>
+  <div *dxTemplate="let data of 'content'">
+    <div class="button-content">
+      <i
+        *ngIf="!loadIndicatorVisible && icon"
+        [class]="'icon-botao ' + icon"
+      ></i>
+
+      <span class="icon-botao" *ngIf="loadIndicatorVisible">
+        <i class="inf-i-solid-spinner inf-spin"></i>
+      </span>
+
+      <span class="dx-button-text">{{ text }}</span>
+    </div>
+  </div>
+</dx-button>

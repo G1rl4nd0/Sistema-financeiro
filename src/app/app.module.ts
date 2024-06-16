@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DxButtonModule, DxDataGridModule, DxDropDownButtonModule, DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
 import { DxiColumnModule } from 'devextreme-angular/ui/nested';
 import { FiltrosModule } from './shared/components/filtros/filtros.module';
+import { ButtonComponentModule } from './shared/components/buttons/button-padrao/button-padrao.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FiltrosModule } from './shared/components/filtros/filtros.module';
     EditarInformacaoBancariaComponent
   ],
   imports: [
+    ButtonComponentModule,
     FiltrosModule,
     BrowserModule,
     BrowserAnimationsModule,

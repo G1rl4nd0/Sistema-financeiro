@@ -24,6 +24,7 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
   @Output() public onClick = new EventEmitter<CadastrarInformacaoBancaria>()
 
   form!: FormGroup;
+  public disabled: boolean = false;
 
   situacaoDataSource: SituacaoOption[] = [
     { text: 'Entrada', value: true },
@@ -52,6 +53,10 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
 
   onSubmit() {
 
+  }
+
+  onInputChange() {
+    this.form.markAsDirty
   }
 
   CadastrarInformacaoBancaria() {

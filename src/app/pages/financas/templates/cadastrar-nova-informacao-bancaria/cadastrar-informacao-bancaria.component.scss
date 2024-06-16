@@ -45,3 +45,17 @@
   background-color: rgba(221, 221, 221, 0.808);
   color: #333;
 }
+
+::ng-deep .botao .dx-button-mode-contained.dx-button-default {
+  background-color: #dcdcdc;
+  border-color: transparent;
+  color: #000;
+}
+
+::ng-deep .botao-gravar .dx-button-mode-contained.dx-button-default {
+  background-color: #28A745;
+  border-color: transparent;
+  color: #fff;
+}
+
+
