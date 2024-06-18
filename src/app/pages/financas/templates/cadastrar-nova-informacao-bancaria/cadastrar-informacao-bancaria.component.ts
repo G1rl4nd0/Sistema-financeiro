@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 import { FormService } from 'src/app/shared/services/form/form.service';
 import { NotificacoesService } from 'src/app/shared/services/notificacoes/notificacoes.service';
+import { confirm } from 'devextreme/ui/dialog';
 
 export interface CadastrarInformacaoBancaria {
   Titulo: string;
@@ -68,8 +69,13 @@ export class CadastrarInformacaoBancariaComponent implements OnInit {
   }
 
   DesistirCadastrarInformacao() {
-    this.form.reset();
+    const result: any = confirm(
+      ('Tem certeza de que deseja desistir?'),
+      ('Confirmação')
+    );
+
+    result.then((dialogResult: any) => {
+      if (dialogResult) this.form.reset()
+    })
   }
-
-
 }

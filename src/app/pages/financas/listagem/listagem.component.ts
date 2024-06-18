@@ -11,9 +11,9 @@ export class ListagemComponent implements OnInit {
   dataSource: any[] = [
     {
       Id: 1,
-      Nome: 'Item 1',
-      Icone: 'icone1.png',
-      Ativo: true,
+      Nome: 'Deposito',
+      Tipo: 'Entrada',
+      Valor: '1.000,00',
       CriadoPor: {
         Data: new Date(2024, 5, 12),
         Nome: 'João',
@@ -27,9 +27,9 @@ export class ListagemComponent implements OnInit {
     },
     {
       Id: 2,
-      Nome: 'Item 1',
-      Icone: 'icone1.png',
-      Ativo: true,
+      Nome: 'Deposito',
+      Tipo: 'Entrada',
+      Valor: '1.000,00',
       CriadoPor: {
         Data: new Date(2024, 5, 12),
         Nome: 'João',
@@ -43,9 +43,9 @@ export class ListagemComponent implements OnInit {
     },
     {
       Id: 3,
-      Nome: 'Item 1',
-      Icone: 'icone1.png',
-      Ativo: true,
+      Nome: 'Deposito',
+      Tipo: 'Entrada',
+      Valor: '1.000,00',
       CriadoPor: {
         Data: new Date(2024, 5, 12),
         Nome: 'João',
@@ -59,9 +59,9 @@ export class ListagemComponent implements OnInit {
     },
     {
       Id: 4,
-      Nome: 'Item 1',
-      Icone: 'icone1.png',
-      Ativo: true,
+      Nome: 'Deposito',
+      Tipo: 'Entrada',
+      Valor: '1.000,00',
       CriadoPor: {
         Data: new Date(2024, 5, 12),
         Nome: 'João',
@@ -75,9 +75,9 @@ export class ListagemComponent implements OnInit {
     },
     {
       Id: 5,
-      Nome: 'Item 1',
-      Icone: 'icone1.png',
-      Ativo: true,
+      Nome: 'Deposito',
+      Tipo: 'Entrada',
+      Valor: '1.000,00',
       CriadoPor: {
         Data: new Date(2024, 5, 12),
         Nome: 'João',

@@ -102,7 +102,7 @@
           <div class="modal-footer">
             <button-padrao-component
               class="botao"
-              (click)="DesistirCadastrarInformacao()"
+              (onClick)="DesistirCadastrarInformacao()"
               [disabled]="!form.dirty || disabled"
               [text]="'Desistir'"
               [icon]="'fas fa-times-circle'"
@@ -110,7 +110,7 @@
 
             <button-padrao-component
               class="botao-gravar"
-              (click)="CadastrarInformacaoBancaria()"
+              (onClick)="CadastrarInformacaoBancaria()"
               [disabled]="!form.valid || disabled"
               [text]="'Gravar'"
               [icon]="'fas fa-check'"

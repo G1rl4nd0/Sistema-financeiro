@@ -47,9 +47,13 @@
 }
 
 ::ng-deep .botao .dx-button-mode-contained.dx-button-default {
-  background-color: #dcdcdc;
+  background-color: #f1f1f1;
   border-color: transparent;
   color: #000;
+
+  .icon-botao {
+    color: #1e3969;
+  }
 }
 
 ::ng-deep .botao-gravar .dx-button-mode-contained.dx-button-default {

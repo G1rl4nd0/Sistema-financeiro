@@ -224,3 +224,13 @@
   border-color: transparent;
   color: #fff;
 }
+
+::ng-deep .dx-datagrid-rowsview .dx-row-focused.dx-data-row > td:not(.dx-focused) {
+  background-color: #1e3969;
+  color: #fff;
+}
+
+::ng-deep .dx-datagrid-rowsview .dx-row-focused.dx-data-row:not(.dx-row-lines) > td {
+  border-top: 1px solid #1e3969;
+  border-bottom: 1px solid #1e3969;
+}
