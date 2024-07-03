@@ -1,9 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-@import '~ngx-toastr/toastr.css';
+@import "~ngx-toastr/toastr.css";
 
 :root {
   --font-size-base: 1rem;
-
 }
 
 * {
@@ -23,14 +22,13 @@ body {
 }
 
 :root {
-  --color-dark: #151515;
-  --color-gray: #083344;
-  --color-light: #F8F9FA;
-  --primary-color: #1E3969;
+  --color-dark: #121214;
+  --color-gray: #333334;
+  --color-light: #f8f9fa;
+  --primary-color: #1e3969;
   --text-color: #000000;
   --text-color-gray: #d1d5db;
   --color-border: #d2d1d1;
-
 }
 
 .light-mode {
@@ -43,12 +41,8 @@ body {
   }
 
   header {
-    background-color:  var(--primary-color);
+    background-color: var(--primary-color);
   }
-
-
-
-
 }
 
 .dark-mode {
@@ -57,7 +51,7 @@ body {
 
   .c-inf-listagem-detalhes {
     background-color: var(--color-dark);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--text-color-gray);
   }
 
   .c-inf-listagem-box-1 {
@@ -65,7 +59,7 @@ body {
     box-shadow: none !important;
   }
 
-  .accordion-item:first-of-type>.accordion-header .accordion-button {
+  .accordion-item:first-of-type > .accordion-header .accordion-button {
     background-color: var(--color-gray);
     color: var(--text-color-gray);
   }
@@ -78,14 +72,53 @@ body {
     color: var(--text-color-gray);
   }
 
+  .dx-accordion-item-opened .dx-accordion-item-body {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
+  .form-control {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
+  .dx-accordion-item-opened.dx-state-hover > .dx-accordion-item-title,
+  .dx-accordion-item-opened > .dx-accordion-item-title {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
+  .dx-accordion-item-title {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
+  .dx-accordion-item-title::before {
+    color: var(--text-color-gray);
+  }
+
+  .dx-datagrid-content .dx-datagrid-table .dx-row > td, .dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
+  .offcanvas-body {
+    background-color: var(--color-dark);
+  }
+
+  .modal-body {
+    background-color: var(--color-gray) !important;
+    color: var(--text-color-gray);
+  }
+
+  .offcanvas-header {
+    background-color: var(--color-dark);
+    color: var(--text-color-gray);
+  }
+
   header {
     background-color: var(--color-gray);
   }
-
-
-
-
-
 }
 
 html,
@@ -95,12 +128,30 @@ body {
   background-color: var(--color-background);
 }
 
-h1, .h1 { font-size: 3.2rem; }
-h2, .h2 { font-size: 2.4rem; }
-h3, .h3 { font-size: 1.9rem; }
-h4, .h4 { font-size: 1.6rem; }
-h5, .h5 { font-size: 1.4rem; }
-h6, .h6 { font-size: 1.3rem; }
+h1,
+.h1 {
+  font-size: 3.2rem;
+}
+h2,
+.h2 {
+  font-size: 2.4rem;
+}
+h3,
+.h3 {
+  font-size: 1.9rem;
+}
+h4,
+.h4 {
+  font-size: 1.6rem;
+}
+h5,
+.h5 {
+  font-size: 1.4rem;
+}
+h6,
+.h6 {
+  font-size: 1.3rem;
+}
 
 label,
 p {
@@ -112,15 +163,15 @@ p {
 }
 
 .c-inf-input:hover {
-  border-color: #355FAC66;
+  border-color: #355fac66;
 }
 
 .c-inf-input:focus {
-  border-color: #1E3969;
+  border-color: #1e3969;
 }
 
 .c-inf-color-danger {
-  color: #D9534F;
+  color: #d9534f;
 }
 
 .grid-column-middle {
